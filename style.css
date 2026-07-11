@@ -302,6 +302,16 @@ font-size:20px;
 
 }
 
+.header-left{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:8px;
+
+}
+
 #section-title{
 
   font-size:32px;
@@ -324,7 +334,7 @@ font-size:20px;
 
 #section-description{
 
-  margin:10px 0 18px;
+  margin:0;
 
   color:var(--sub);
 
@@ -335,7 +345,6 @@ font-size:20px;
   white-space:pre-line;
 
 }
-
 
 /* ==========================
    Posts
