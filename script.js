@@ -180,14 +180,16 @@ function render() {
 }
 
     // カテゴリー
-    if (currentCategory !== "all") {
+    if (currentCategory === "all") {
 
-        posts = posts.filter(post =>
-            post.categories.includes(currentCategory)
-        );
+    posts = posts.filter(post =>
+        post.categories.some(category =>
+            category !== "yc" &&
+            category !== "yi"
+        )
+    );
 
-    }
-
+}
     // 検索
     if (currentKeyword !== "") {
 
