@@ -17,7 +17,67 @@
   --tag:#eef4fb;
 
   --shadow:0 10px 35px rgba(0,0,0,.08);
+/* ==========================================
+   Post Card
+========================================== */
 
+#posts{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.post-card{
+
+    background:#fff;
+
+    border:1px solid #edf0f3;
+
+    border-radius:18px;
+
+    padding:26px;
+
+    transition:.25s;
+
+}
+
+.post-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.post-date{
+
+    color:#8b95a1;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+.post-title{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.post-content{
+
+    color:#4e5865;
+
+    line-height:2;
+
+    margin-bottom:20px;
+
+}
   --radius:22px;
 
   --max-width:1300px;
@@ -229,5 +289,42 @@ button{
   color:var(--sub);
 
   margin-bottom:40px;
+
+}
+/* ==========================================
+   Tags
+========================================== */
+
+.tags{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+.tag{
+
+    background:#f4f7fb;
+
+    color:#55606d;
+
+    border-radius:999px;
+
+    padding:6px 12px;
+
+    font-size:13px;
+
+    transition:.2s;
+
+    cursor:pointer;
+
+}
+
+.tag:hover{
+
+    background:#dfeaf6;
 
 }
