@@ -130,10 +130,18 @@ function parsePosts(text) {
 
         if (match) {
 
-            categories =
-                match[1]
-                    .toLowerCase()
-                    .split("");
+            const code =
+    match[1].toLowerCase();
+
+if (code === "yc" || code === "yi") {
+
+    categories = [code];
+
+} else {
+
+    categories = code.split("");
+
+}
 
             content =
     content
