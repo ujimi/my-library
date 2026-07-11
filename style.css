@@ -198,6 +198,10 @@ button{
   appearance:none;
   -webkit-appearance:none;
 
+   display:block;
+
+font-size:20px;
+
   background:none;
 
   border:none;
