@@ -239,6 +239,43 @@ font-size:20px;
   background:var(--active);
 
 }
+.menu-section{
+
+    margin-top:22px;
+
+    margin-bottom:10px;
+
+    font-size:13px;
+
+    letter-spacing:.18em;
+
+    color:var(--sub);
+
+    text-transform:uppercase;
+
+}
+
+.secret-menu{
+
+    display:none;
+
+    margin-left:18px;
+
+}
+
+.secret-menu.open{
+
+    display:block;
+
+}
+
+.secret-item{
+
+    font-size:15px !important;
+
+    color:var(--sub);
+
+}
 /* ==========================
    Content
 ========================== */
