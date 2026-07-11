@@ -1,86 +1,32 @@
 /* =====================================================
-   The Archive
-   Base Style
+   The Archive v1.0
+   Part 1 / 2
 ===================================================== */
 
 :root{
-  --bg:#f7f8fb;
+
+  --bg:#f8f9fb;
+
   --paper:#ffffff;
-  --cover:#dbe7f3;
-  --cover-dark:#c5d8ea;
 
-  --line:#e7ebef;
+  --sidebar:#eef3f7;
 
-  --text:#3a3a3a;
-  --sub:#7b8794;
+  --line:#e8edf2;
 
-  --tag:#eef4fb;
+  --text:#3b434c;
 
-  --shadow:0 10px 35px rgba(0,0,0,.08);
-/* ==========================================
-   Post Card
-========================================== */
+  --sub:#7f8b98;
 
-#posts{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-}
+  --hover:#f7f9fc;
 
-.post-card{
+  --active:#edf4fb;
 
-    background:#fff;
+  --shadow:0 14px 40px rgba(0,0,0,.06);
 
-    border:1px solid #edf0f3;
-
-    border-radius:18px;
-
-    padding:26px;
-
-    transition:.25s;
-
-}
-
-.post-card:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.05);
-
-}
-
-.post-date{
-
-    color:#8b95a1;
-
-    font-size:13px;
-
-    margin-bottom:10px;
-
-}
-
-.post-title{
-
-    font-size:28px;
-
-    font-weight:700;
-
-    margin-bottom:12px;
-
-}
-
-.post-content{
-
-    color:#4e5865;
-
-    line-height:2;
-
-    margin-bottom:20px;
-
-}
   --radius:22px;
 
   --max-width:1300px;
+
 }
 
 *{
@@ -104,21 +50,12 @@ body{
     "Yu Gothic",
     sans-serif;
 
-  line-height:1.8;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  display:block;
-  max-width:100%;
 }
 
 button{
+
   font:inherit;
+
 }
 
 .wrapper{
@@ -128,13 +65,13 @@ button{
       var(--max-width)
   );
 
-  margin:50px auto;
+  margin:45px auto;
 
 }
 
-/* ===========================
-   BOOK
-=========================== */
+/* ==========================
+   Book
+========================== */
 
 .book{
 
@@ -152,23 +89,19 @@ button{
 
 }
 
-/* ===========================
-   SIDEBAR
-=========================== */
+/* ==========================
+   Sidebar
+========================== */
 
 .sidebar{
 
-  width:300px;
+  width:280px;
 
-  background:
+  background:var(--sidebar);
 
-      linear-gradient(
-        180deg,
-        var(--cover),
-        var(--cover-dark)
-      );
+  border-right:1px solid var(--line);
 
-  padding:40px 30px;
+  padding:38px 28px;
 
   flex-shrink:0;
 
@@ -180,15 +113,25 @@ button{
 
   font-weight:700;
 
-  letter-spacing:.05em;
+  letter-spacing:.03em;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+}
+
+.logo:hover{
+
+  opacity:.7;
 
 }
 
 .subtitle{
 
-  color:#5f6b77;
-
   margin-top:8px;
+
+  color:var(--sub);
 
   font-size:14px;
 
@@ -196,27 +139,49 @@ button{
 
 .section{
 
-  margin-top:45px;
+  margin-top:40px;
 
 }
 
 .section h3{
 
-  font-size:14px;
+  color:var(--sub);
 
-  color:#56616d;
+  font-size:13px;
 
   text-transform:uppercase;
 
-  letter-spacing:.15em;
+  letter-spacing:.18em;
 
-  margin-bottom:15px;
+  margin-bottom:16px;
 
 }
 
-/* ===========================
-   MENU
-=========================== */
+/* ==========================
+   Search
+========================== */
+
+.search{
+
+  width:100%;
+
+  border:none;
+
+  outline:none;
+
+  background:white;
+
+  padding:13px 15px;
+
+  border-radius:12px;
+
+  border:1px solid var(--line);
+
+}
+
+/* ==========================
+   Menu
+========================== */
 
 .menu{
 
@@ -224,49 +189,46 @@ button{
 
   flex-direction:column;
 
-  gap:8px;
+  gap:6px;
 
 }
 
-.menu a{
+.menu-item{
 
-  padding:10px 14px;
-
-  border-radius:12px;
-
-  transition:.25s;
-
-}
-
-.menu a:hover{
-
-  background:rgba(255,255,255,.55);
-
-}
-
-/* ===========================
-   SEARCH
-=========================== */
-
-.search{
-
-  width:100%;
-
-  padding:12px 15px;
+  background:none;
 
   border:none;
 
-  border-radius:12px;
+  text-align:left;
 
-  outline:none;
+  padding:10px 14px;
 
-  background:white;
+  border-left:3px solid transparent;
+
+  color:var(--text);
+
+  cursor:pointer;
+
+  transition:.2s;
 
 }
 
-/* ===========================
-   CONTENT
-=========================== */
+.menu-item:hover{
+
+  background:var(--hover);
+
+}
+
+.menu-item.active{
+
+  border-left-color:#7ca7d6;
+
+  background:var(--active);
+
+}
+/* ==========================
+   Content
+========================== */
 
 .content{
 
@@ -276,55 +238,160 @@ button{
 
 }
 
-.page-title{
+.content-header{
 
-  font-size:34px;
+  display:flex;
 
-  margin-bottom:10px;
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:35px;
+
+  gap:20px;
 
 }
 
-.page-desc{
+#section-title{
+
+  font-size:32px;
+
+  font-weight:700;
+
+}
+
+#post-count{
 
   color:var(--sub);
 
-  margin-bottom:40px;
-
-}
-/* ==========================================
-   Tags
-========================================== */
-
-.tags{
-
-    display:flex;
-
-    gap:8px;
-
-    flex-wrap:wrap;
+  font-size:14px;
 
 }
 
-.tag{
 
-    background:#f4f7fb;
+/* ==========================
+   Posts
+========================== */
 
-    color:#55606d;
+#posts{
 
-    border-radius:999px;
+  display:flex;
 
-    padding:6px 12px;
+  flex-direction:column;
 
-    font-size:13px;
-
-    transition:.2s;
-
-    cursor:pointer;
+  gap:22px;
 
 }
 
-.tag:hover{
+.post-card{
 
-    background:#dfeaf6;
+  background:white;
+
+  border:1px solid var(--line);
+
+  border-radius:18px;
+
+  padding:24px;
+
+  transition:.25s;
+
+}
+
+.post-card:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+
+}
+
+.post-content{
+
+  white-space:pre-wrap;
+
+  word-break:break-word;
+
+  line-height:2;
+
+  color:var(--text);
+
+}
+
+
+/* ==========================
+   Empty
+========================== */
+
+.empty{
+
+  color:var(--sub);
+
+  text-align:center;
+
+  padding:60px 20px;
+
+}
+
+
+/* ==========================
+   Scrollbar
+========================== */
+
+::-webkit-scrollbar{
+
+  width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:#d7dde5;
+
+  border-radius:999px;
+
+}
+
+::-webkit-scrollbar-track{
+
+  background:transparent;
+
+}
+
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:900px){
+
+  .book{
+
+    flex-direction:column;
+
+  }
+
+  .sidebar{
+
+    width:100%;
+
+    border-right:none;
+
+    border-bottom:1px solid var(--line);
+
+  }
+
+  .content{
+
+    padding:30px 22px;
+
+  }
+
+  .content-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
 
 }
