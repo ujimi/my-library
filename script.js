@@ -165,18 +165,9 @@ if (code === "yc" || code === "yi") {
 function render() {
 
     let posts = [...allPosts];
-    if (currentCategory === "all") {
 
-    posts = posts.filter(post =>
-        post.categories.some(category =>
-            !HIDDEN_CATEGORIES.includes(category)
-        )
-    );
-
-}
-
-    // カテゴリー
-    if (currentCategory === "all") {
+   // トップページ
+if (currentCategory === "all") {
 
     posts = posts.filter(post =>
         post.categories.some(category =>
@@ -186,6 +177,16 @@ function render() {
     );
 
 }
+
+// カテゴリー
+if (currentCategory !== "all") {
+
+    posts = posts.filter(post =>
+        post.categories.includes(currentCategory)
+    );
+
+}
+
     // 検索
     if (currentKeyword !== "") {
 
