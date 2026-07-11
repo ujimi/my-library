@@ -11,7 +11,6 @@
 const POSTS_FILE = "posts/posts.txt";
 
 const CATEGORY_NAMES = {
-const CATEGORY_NAMES = {
     all: "The Archive",
     k: "⚔️🎹",
     o: "🍵",
@@ -341,12 +340,3 @@ function setupSearch() {
 
 }
 
-// ---------- 起動 ----------
-
-loadPosts();
-
-setupMenu();
-
-setupArchiveTitle();
-
-setupSearch();
