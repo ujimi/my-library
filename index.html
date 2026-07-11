@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
 <meta charset="UTF-8">
@@ -23,19 +24,18 @@
 
 <aside class="sidebar">
 
-<div class="logo">
+<h1 class="logo">
 The Archive
-</div>
+</h1>
 
-<div class="subtitle">
-personal records &amp; notes
-</div>
+<p class="subtitle">
+personal records & notes
+</p>
 
 <div class="section">
 
-<h3>Search</h3>
-
 <input
+id="search"
 class="search"
 type="text"
 placeholder="Search..."
@@ -49,19 +49,21 @@ placeholder="Search..."
 
 <nav class="menu">
 
-<a href="#">⚔️🎹 呟き</a>
+<a href="#" data-category="all">すべて</a>
 
-<a href="#">🍵</a>
+<a href="#" data-category="tweets">⚔️🎹 呟き</a>
 
-<a href="#">☔</a>
+<a href="#" data-category="tea">🍵</a>
 
-<a href="#">🐼</a>
+<a href="#" data-category="rain">☔</a>
 
-<a href="#">🐰</a>
+<a href="#" data-category="panda">🐼</a>
 
-<a href="#">🍡</a>
+<a href="#" data-category="rabbit">🐰</a>
 
-<a href="#">📦 その他</a>
+<a href="#" data-category="dango">🍡</a>
+
+<a href="#" data-category="other">その他</a>
 
 </nav>
 
@@ -71,17 +73,11 @@ placeholder="Search..."
 
 <h3>Tags</h3>
 
-<nav class="menu">
+<div id="tag-list">
 
-<a href="#">#騎士</a>
+<!-- script.js が自動生成 -->
 
-<a href="#">#作曲家</a>
-
-<a href="#">#考察</a>
-
-<a href="#">#ランク戦</a>
-
-</nav>
+</div>
 
 </div>
 
@@ -93,22 +89,9 @@ placeholder="Search..."
 
 <main class="content">
 
-<h1 class="page-title">
-
-The Archive
-
-</h1>
-
-<p class="page-desc">
-
-ここは自分だけの記録保管庫。<br>
-Mastodonの投稿やメモを、あとから読み返しやすく整理するための場所です。
-
-</p>
-
 <div id="posts">
 
-<!-- 次回ここに投稿が表示される -->
+<!-- 投稿は script.js が表示 -->
 
 </div>
 
@@ -121,4 +104,5 @@ Mastodonの投稿やメモを、あとから読み返しやすく整理するた
 <script src="script.js"></script>
 
 </body>
+
 </html>
