@@ -151,7 +151,7 @@ function render() {
     if (currentCategory !== "all") {
 
         posts = posts.filter(post =>
-            post.category.includes(currentCategory)
+            post.categories.includes(currentCategory)
         );
 
     }
