@@ -340,3 +340,13 @@ function setupSearch() {
     });
 
 }
+
+// ---------- 起動 ----------
+
+loadPosts();
+
+setupMenu();
+
+setupArchiveTitle();
+
+setupSearch();
