@@ -105,45 +105,51 @@ function parsePosts(text) {
 
     const blocks =
         text
-        .replace(/\r\n/g, "\n")
-        .split("///");
+            .replace(/\r\n/g, "\n")
+            .split("///");
 
     blocks.forEach(block => {
-let content =
-    block.trim();
 
-if (content === "") return;
+        let content =
+            block.trim();
+
+        if (content === "") return;
+
         let categories = ["x"];
 
-const firstLine =
-    content.split("\n")[0].trim();
+        const firstLine =
+            content.split("\n")[0].trim();
 
-const match =
-    firstLine.match(/^【([a-z]+)】$/i);
+        const match =
+            firstLine.match(/^【([a-z]+)】$/i);
 
-if (match) {
+        if (match) {
 
-    categories =
-        match[1]
-        .toLowerCase()
-        .split("");
+            categories =
+                match[1]
+                    .toLowerCase()
+                    .split("");
 
-    content =
-        content
-        .split("\n")
-        .slice(1)
-        .join("\n")
-        .replace(/^\s+/, "");
+            content =
+                content
+                    .split("\n")
+                    .slice(1)
+                    .join("\n")
+                    .replace(/^\s+/, "");
+
+        }
+
+        allPosts.push({
+
+            categories,
+
+            content
+
+        });
+
+    });
 
 }
-
-allPosts.push({
-
-    categories,
-
-    content
-
-});
 // ---------- 表示 ----------
 
 function render() {
