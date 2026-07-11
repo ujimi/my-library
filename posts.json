@@ -1,11 +1,6 @@
 [
-  {
-    "id": 1,
-    "category": "tweets",
-    "tags": [
-      "騎士",
-      "ランク戦"
-    ],
-    "content": "ここにMastodonの投稿を書くよ！"
-  }
+    {
+        "section": "tweets",
+        "content": "ここにMastodonの投稿を書きます。"
+    }
 ]
