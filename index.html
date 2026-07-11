@@ -2,107 +2,85 @@
 <html lang="ja">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archive</title>
 
-<title>The Archive</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="wrapper">
 
-<div class="book">
+    <div class="book">
 
-<!-- =========================
-     Sidebar
-========================= -->
+        <!-- Sidebar -->
+        <aside class="sidebar">
 
-<aside class="sidebar">
+            <h1 class="logo">The Archive</h1>
 
-<h1 class="logo">
-The Archive
-</h1>
+            <p class="subtitle">
+                personal records & notes
+            </p>
 
-<p class="subtitle">
-personal records & notes
-</p>
+            <div class="section">
 
-<div class="section">
+                <input
+                    id="search"
+                    class="search"
+                    type="text"
+                    placeholder="Search..."
+                >
 
-<input
-id="search"
-class="search"
-type="text"
-placeholder="Search..."
->
+            </div>
 
-</div>
+            <div class="section">
 
-<div class="section">
+                <h3>Archive</h3>
 
-<h3>Category</h3>
+                <nav class="menu">
 
-<nav class="menu">
+                    <a href="#" data-section="all">すべて</a>
 
-<a href="#" data-category="all">すべて</a>
+                    <a href="#" data-section="tweets">⚔️🎹 呟き</a>
 
-<a href="#" data-category="tweets">⚔️🎹 呟き</a>
+                    <a href="#" data-section="tea">🍵</a>
 
-<a href="#" data-category="tea">🍵</a>
+                    <a href="#" data-section="rain">☔</a>
 
-<a href="#" data-category="rain">☔</a>
+                    <a href="#" data-section="panda">🐼</a>
 
-<a href="#" data-category="panda">🐼</a>
+                    <a href="#" data-section="rabbit">🐰</a>
 
-<a href="#" data-category="rabbit">🐰</a>
+                    <a href="#" data-section="dango">🍡</a>
 
-<a href="#" data-category="dango">🍡</a>
+                    <a href="#" data-section="other">その他</a>
 
-<a href="#" data-category="other">その他</a>
+                </nav>
 
-</nav>
+            </div>
 
-</div>
+        </aside>
 
-<div class="section">
+        <!-- Main -->
 
-<h3>Tags</h3>
+        <main class="content">
 
-<div id="tag-list">
+            <div id="posts">
 
-<!-- script.js が自動生成 -->
+                <!-- script.js がここへ自動で投稿を表示 -->
 
-</div>
+            </div>
 
-</div>
+        </main>
 
-</aside>
-
-<!-- =========================
-     Main
-========================= -->
-
-<main class="content">
-
-<div id="posts">
-
-<!-- 投稿は script.js が表示 -->
-
-</div>
-
-</main>
-
-</div>
+    </div>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
