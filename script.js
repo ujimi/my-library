@@ -131,11 +131,12 @@ function parsePosts(text) {
                     .split("");
 
             content =
-                content
-                    .split("\n")
-                    .slice(1)
-                    .join("\n")
-                    .replace(/^\s+/, "");
+    content
+        .split("\n")
+        .slice(1)
+        .join("\n")
+        .replace(/^\n+/, "")
+        .trimStart();
 
         }
 
