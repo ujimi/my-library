@@ -109,7 +109,10 @@ function parsePosts(text) {
         .split("///");
 
     blocks.forEach(block => {
+let content =
+    block.trim();
 
+if (content === "") return;
         let categories = ["x"];
 
 const firstLine =
