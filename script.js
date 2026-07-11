@@ -33,6 +33,9 @@ const searchInput =
 const sectionTitle =
     document.getElementById("section-title");
 
+const archiveTitle =
+    document.querySelector(".logo");
+
 const postCount =
     document.getElementById("post-count");
 
@@ -57,6 +60,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     setupMenu();
 
+setupArchiveTitle();
+    
     setupSearch();
 
     render();
@@ -272,6 +277,28 @@ function setupMenu() {
 
 }
 
+// ---------- タイトルクリックで全表示 ----------
+
+function setupArchiveTitle() {
+
+    archiveTitle.style.cursor = "pointer";
+
+    archiveTitle.addEventListener("click", () => {
+
+        currentCategory = "all";
+
+        menuButtons.forEach(button =>
+            button.classList.remove("active")
+        );
+
+        sectionTitle.textContent =
+            CATEGORY_NAMES.all;
+
+        render();
+
+    });
+
+}
 
 // ---------- 検索 ----------
 
