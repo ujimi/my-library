@@ -195,9 +195,18 @@ button{
 
 .menu-item{
 
+  appearance:none;
+  -webkit-appearance:none;
+
   background:none;
 
   border:none;
+
+  outline:none;
+
+  box-shadow:none;
+
+  width:100%;
 
   text-align:left;
 
