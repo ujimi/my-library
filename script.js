@@ -23,6 +23,43 @@ const CATEGORY_NAMES = {
     x: "その他"
 };
 
+const CATEGORY_DESCRIPTIONS = {
+
+    all:
+`全ての捏造創作ツイートまとめ。
+⚔️🎹の話のみカテゴリー分けしています。
+マストドンに投稿した内容を保管しています。`,
+
+    k:
+`⚔️🎹のみの創作まとめ。`,
+
+    o:
+`🍵に関する創作まとめ。
+⚔️🎹は別カテゴリーにいます。`,
+
+    a:
+`☔に関する創作まとめ。
+⚔️🎹は別カテゴリーにいます。`,
+
+    p:
+`🐼に関する創作まとめ。`,
+
+    u:
+`🐰に関する創作まとめ。`,
+
+    d:
+`🍡に関する創作まとめ。`,
+
+    yc:
+`個人的な考察まとめ。`,
+
+    yi:
+`個人的な解釈まとめ。`,
+
+    x:
+`なんでもあるかもしれないし、なんにもないかもしれない。`
+
+};
 // ---------- HTML ----------
 
 const postsContainer =
@@ -39,6 +76,9 @@ const archiveTitle =
 
 const postCount =
     document.getElementById("post-count");
+
+const sectionDescription =
+    document.getElementById("section-description");
 
 const menuButtons =
     document.querySelectorAll(".menu-item");
@@ -204,6 +244,8 @@ if (currentCategory !== "all") {
     // タイトル
     sectionTitle.textContent =
         CATEGORY_NAMES[currentCategory];
+    sectionDescription.textContent =
+    CATEGORY_DESCRIPTIONS[currentCategory];
 
     // 件数
     postCount.textContent =
