@@ -110,44 +110,37 @@ function parsePosts(text) {
 
     blocks.forEach(block => {
 
-        let content =
-            block.trim();
+        let categories = ["x"];
 
-        if (content === "") return;
+const firstLine =
+    content.split("\n")[0].trim();
 
-        let category = "x";
+const match =
+    firstLine.match(/^【([a-z]+)】$/i);
 
-        const firstLine =
-            content.split("\n")[0].trim();
+if (match) {
 
-        const match =
-            firstLine.match(/^【([a-z]+)】$/i);
+    categories =
+        match[1]
+        .toLowerCase()
+        .split("");
 
-        if (match) {
-
-            category =
-                match[1].toLowerCase();
-
-            content =
-                content
-                .split("\n")
-                .slice(1)
-                .join("\n")
-                .trim();
-
-        }
-
-        allPosts.push({
-
-            category,
-
-            content
-
-        });
-
-    });
+    content =
+        content
+        .split("\n")
+        .slice(1)
+        .join("\n")
+        .replace(/^\s+/, "");
 
 }
+
+allPosts.push({
+
+    categories,
+
+    content
+
+});
 // ---------- 表示 ----------
 
 function render() {
