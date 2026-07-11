@@ -220,15 +220,9 @@ function render() {
             escapeHtml(post.content)
             .replace(/\n/g, "<br>");
 
-        card.innerHTML = `
-
-            <div class="post-content">
-
-                ${text}
-
-            </div>
-
-        `;
+  card.innerHTML = `
+<div class="post-content">${text}</div>
+`;
 
         postsContainer.appendChild(card);
 
