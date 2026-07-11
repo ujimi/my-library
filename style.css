@@ -294,11 +294,11 @@ font-size:20px;
 
   justify-content:space-between;
 
-  align-items:center;
+  align-items:flex-start;
 
   margin-bottom:35px;
 
-  gap:20px;
+  gap:30px;
 
 }
 
@@ -346,6 +346,17 @@ font-size:20px;
 
 }
 
+#post-count{
+
+  color:var(--sub);
+
+  font-size:14px;
+
+  white-space:nowrap;
+
+  margin-top:6px;
+
+}
 /* ==========================
    Posts
 ========================== */
