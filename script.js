@@ -264,12 +264,25 @@ function escapeHtml(text) {
 
 }
 // ---------- メニュー ----------
-
 function setupMenu() {
+
+    const secretToggle =
+        document.getElementById("secret-toggle");
+
+    const secretMenu =
+        document.getElementById("secret-menu");
+
+    secretToggle.addEventListener("click", () => {
+
+        secretMenu.classList.toggle("open");
+
+    });
 
     menuButtons.forEach(button => {
 
         button.addEventListener("click", () => {
+
+            if (!button.dataset.category) return;
 
             currentCategory =
                 button.dataset.category;
@@ -279,6 +292,8 @@ function setupMenu() {
             );
 
             button.classList.add("active");
+
+            secretMenu.classList.remove("open");
 
             render();
 
