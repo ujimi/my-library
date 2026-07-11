@@ -22,10 +22,6 @@ const CATEGORY_NAMES = {
     yi: "解釈",
     x: "その他"
 };
-const HIDDEN_CATEGORIES = [
-    "y"
-];
-
 
 // ---------- HTML ----------
 
