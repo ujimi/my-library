@@ -18,7 +18,8 @@ const CATEGORY_NAMES = {
     p: "🐼",
     u: "🐰",
     d: "🍡",
-    y: "🗝",
+    yc: "考察",
+    yi: "解釈",
     x: "その他"
 };
 const HIDDEN_CATEGORIES = [
