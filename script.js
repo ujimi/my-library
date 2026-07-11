@@ -11,6 +11,7 @@
 const POSTS_FILE = "posts/posts.txt";
 
 const CATEGORY_NAMES = {
+const CATEGORY_NAMES = {
     all: "The Archive",
     k: "⚔️🎹",
     o: "🍵",
@@ -18,8 +19,12 @@ const CATEGORY_NAMES = {
     p: "🐼",
     u: "🐰",
     d: "🍡",
+    y: "🗝",
     x: "その他"
 };
+const HIDDEN_CATEGORIES = [
+    "y"
+];
 
 
 // ---------- HTML ----------
@@ -156,6 +161,15 @@ function parsePosts(text) {
 function render() {
 
     let posts = [...allPosts];
+    if (currentCategory === "all") {
+
+    posts = posts.filter(post =>
+        post.categories.some(category =>
+            !HIDDEN_CATEGORIES.includes(category)
+        )
+    );
+
+}
 
     // カテゴリー
     if (currentCategory !== "all") {
